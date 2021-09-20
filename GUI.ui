@@ -40,22 +40,12 @@
      <string>-</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="turn_number_A">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>120</y>
-      <width>81</width>
-      <height>61</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTextBrowser" name="current_battleround_text">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>380</x>
       <y>20</y>
-      <width>251</width>
+      <width>261</width>
       <height>41</height>
      </rect>
     </property>
@@ -70,7 +60,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="current_battleround_number">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>480</x>
       <y>60</y>
       <width>71</width>
       <height>51</height>
@@ -97,7 +87,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="playerB_add_turn">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>930</x>
       <y>120</y>
       <width>61</width>
       <height>61</height>
@@ -110,7 +100,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="turn_number_B">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>850</x>
       <y>120</y>
       <width>81</width>
       <height>61</height>
@@ -120,7 +110,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="turn_B">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>790</x>
       <y>80</y>
       <width>201</width>
       <height>41</height>
@@ -137,7 +127,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="playerB_subtract_turn">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>790</x>
       <y>120</y>
       <width>61</width>
       <height>61</height>
@@ -203,7 +193,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="playerB_add_CP">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>930</x>
       <y>250</y>
       <width>61</width>
       <height>61</height>
@@ -216,7 +206,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="CP_number_B">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>850</x>
       <y>250</y>
       <width>81</width>
       <height>61</height>
@@ -226,7 +216,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="CP_B">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>790</x>
       <y>210</y>
       <width>201</width>
       <height>41</height>
@@ -243,7 +233,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="playerB_subtract_CP">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>790</x>
       <y>250</y>
       <width>61</width>
       <height>61</height>
@@ -309,7 +299,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="playerB_add_VP">
     <property name="geometry">
      <rect>
-      <x>880</x>
+      <x>930</x>
       <y>390</y>
       <width>61</width>
       <height>61</height>
@@ -322,7 +312,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="VP_number_B">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>850</x>
       <y>390</y>
       <width>81</width>
       <height>61</height>
@@ -332,7 +322,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="VP_B">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>790</x>
       <y>350</y>
       <width>201</width>
       <height>41</height>
@@ -349,7 +339,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="playerB_subtract_VP">
     <property name="geometry">
      <rect>
-      <x>740</x>
+      <x>790</x>
       <y>390</y>
       <width>61</width>
       <height>61</height>
@@ -389,8 +379,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="grand_strategy_A">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>510</y>
+      <x>40</x>
+      <y>530</y>
       <width>221</width>
       <height>22</height>
      </rect>
@@ -399,8 +389,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="grand_strategy_B">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>510</y>
+      <x>760</x>
+      <y>530</y>
       <width>221</width>
       <height>22</height>
      </rect>
@@ -409,7 +399,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="turn_1">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>490</x>
       <y>130</y>
       <width>51</width>
       <height>41</height>
@@ -426,7 +416,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="turn_2">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>490</x>
       <y>200</y>
       <width>51</width>
       <height>41</height>
@@ -443,7 +433,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="turn_3">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>490</x>
       <y>270</y>
       <width>51</width>
       <height>41</height>
@@ -460,7 +450,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="turn_4">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>490</x>
       <y>340</y>
       <width>51</width>
       <height>41</height>
@@ -477,7 +467,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="turn_5">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>490</x>
       <y>410</y>
       <width>51</width>
       <height>41</height>
@@ -494,7 +484,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="playerB">
     <property name="geometry">
      <rect>
-      <x>670</x>
+      <x>720</x>
       <y>20</y>
       <width>271</width>
       <height>41</height>
@@ -551,7 +541,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="battle_tactic_B_2">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>600</x>
       <y>210</y>
       <width>181</width>
       <height>21</height>
@@ -561,7 +551,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="battle_tactic_B_3">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>600</x>
       <y>280</y>
       <width>181</width>
       <height>21</height>
@@ -571,7 +561,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="battle_tactic_B_4">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>600</x>
       <y>350</y>
       <width>181</width>
       <height>21</height>
@@ -581,7 +571,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="battle_tactic_B_5">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>600</x>
       <y>420</y>
       <width>181</width>
       <height>21</height>
@@ -591,7 +581,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QComboBox" name="battle_tactic_B_1">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>600</x>
       <y>140</y>
       <width>181</width>
       <height>21</height>
@@ -601,7 +591,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>460</x>
       <y>140</y>
       <width>16</width>
       <height>21</height>
@@ -614,7 +604,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_2">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>460</x>
       <y>210</y>
       <width>16</width>
       <height>21</height>
@@ -627,7 +617,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_3">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>460</x>
       <y>280</y>
       <width>16</width>
       <height>21</height>
@@ -640,7 +630,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_4">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>460</x>
       <y>350</y>
       <width>16</width>
       <height>21</height>
@@ -653,7 +643,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_5">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>460</x>
       <y>420</y>
       <width>16</width>
       <height>21</height>
@@ -666,7 +656,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_6">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>560</x>
       <y>140</y>
       <width>16</width>
       <height>21</height>
@@ -679,7 +669,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_7">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>560</x>
       <y>210</y>
       <width>16</width>
       <height>21</height>
@@ -692,7 +682,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_8">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>560</x>
       <y>280</y>
       <width>16</width>
       <height>21</height>
@@ -705,7 +695,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_9">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>560</x>
       <y>350</y>
       <width>16</width>
       <height>21</height>
@@ -718,7 +708,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_10">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>560</x>
       <y>420</y>
       <width>16</width>
       <height>21</height>
@@ -731,8 +721,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QTextEdit" name="grand_strategy">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>470</y>
+      <x>310</x>
+      <y>520</y>
       <width>401</width>
       <height>31</height>
      </rect>
@@ -748,8 +738,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_11">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>510</y>
+      <x>1000</x>
+      <y>530</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -773,14 +763,34 @@ p, li { white-space: pre-wrap; }
    <widget class="QCheckBox" name="checkBox_12">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>510</y>
+      <x>10</x>
+      <y>530</y>
       <width>16</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>120</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>
