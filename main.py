@@ -342,7 +342,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Warhammer_AoS_Game_Display"))
         self.playerA_add_turn.setText(_translate("MainWindow", "+"))
         self.playerA_subtract_turn.setText(_translate("MainWindow", "-"))
         self.current_battleround_text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
