@@ -18,209 +18,426 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
-        #Battleround management
+        # Battleround management
         self.current_battleround_text = QtWidgets.QTextBrowser(self.centralwidget)
-        self.current_battleround_text.setGeometry(QtCore.QRect(360, 20, 251, 41))
+        self.current_battleround_text.setGeometry(QtCore.QRect(430, 0, 151, 41))
         self.current_battleround_text.setObjectName("current_battleround_text")
         self.current_battleround_number = QtWidgets.QLabel(self.centralwidget)
-        self.current_battleround_number.setGeometry(QtCore.QRect(450, 60, 71, 51))
+        self.current_battleround_number.setGeometry(QtCore.QRect(470, 40, 71, 51))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.current_battleround_number.setFont(font)
         self.current_battleround_number.setObjectName("current_battleround_number")
 
-        #Player A turn management
+        # Player A turn management
         self.turn_A = QtWidgets.QTextEdit(self.centralwidget)
-        self.turn_A.setGeometry(QtCore.QRect(30, 80, 201, 41))
+        self.turn_A.setGeometry(QtCore.QRect(310, 0, 121, 41))
         self.turn_A.setObjectName("turn_A")
         self.turn_number_A = QtWidgets.QLabel(self.centralwidget)
-        self.turn_number_A.setGeometry(QtCore.QRect(90, 120, 81, 61))
+        self.turn_number_A.setGeometry(QtCore.QRect(360, 40, 71, 51))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.turn_number_A.setFont(font)
+        self.turn_number_A.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.turn_number_A.setObjectName("turn_number_A")
         self.playerA_add_turn = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.addTurn_A())
-        self.playerA_add_turn.setGeometry(QtCore.QRect(170, 120, 61, 61))
+        self.playerA_add_turn.setGeometry(QtCore.QRect(310, 40, 51, 51))
         self.playerA_add_turn.setObjectName("playerA_add_turn")
-        self.playerA_subtract_turn = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.subtractTurn_A())
-        self.playerA_subtract_turn.setGeometry(QtCore.QRect(30, 120, 61, 61))
-        self.playerA_subtract_turn.setObjectName("playerA_subtract_turn")
 
         # Player B turn management
         self.turn_B = QtWidgets.QTextEdit(self.centralwidget)
-        self.turn_B.setGeometry(QtCore.QRect(740, 80, 201, 41))
+        self.turn_B.setGeometry(QtCore.QRect(580, 0, 121, 41))
         self.turn_B.setObjectName("turn_B")
         self.turn_number_B = QtWidgets.QLabel(self.centralwidget)
-        self.turn_number_B.setGeometry(QtCore.QRect(800, 120, 81, 61))
+        self.turn_number_B.setGeometry(QtCore.QRect(580, 40, 71, 51))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.turn_number_B.setFont(font)
         self.turn_number_B.setObjectName("turn_number_B")
         self.playerB_add_turn = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.addTurn_B("1"))
-        self.playerB_add_turn.setGeometry(QtCore.QRect(880, 120, 61, 61))
+        self.playerB_add_turn.setGeometry(QtCore.QRect(650, 40, 51, 51))
         self.playerB_add_turn.setObjectName("playerB_add_turn")
-        self.playerB_subtract_turn = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.subtractTurn_B())
-        self.playerB_subtract_turn.setGeometry(QtCore.QRect(740, 120, 61, 61))
-        self.playerB_subtract_turn.setObjectName("playerB_subtract_turn")
 
         # Player A CP management
         self.CP_A = QtWidgets.QTextEdit(self.centralwidget)
-        self.CP_A.setGeometry(QtCore.QRect(30, 210, 201, 41))
+        self.CP_A.setGeometry(QtCore.QRect(0, 110, 201, 41))
         self.CP_A.setObjectName("CP_A")
         self.CP_number_A = QtWidgets.QLabel(self.centralwidget)
-        self.CP_number_A.setGeometry(QtCore.QRect(90, 250, 81, 61))
+        self.CP_number_A.setGeometry(QtCore.QRect(60, 150, 81, 61))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.CP_number_A.setFont(font)
         self.CP_number_A.setObjectName("CP_number_A")
         self.playerA_add_CP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.addCP_A())
-        self.playerA_add_CP.setGeometry(QtCore.QRect(170, 250, 61, 61))
+        self.playerA_add_CP.setGeometry(QtCore.QRect(140, 150, 61, 61))
         self.playerA_add_CP.setObjectName("playerA_add_CP")
         self.playerA_subtract_CP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.subtractCP_A())
-        self.playerA_subtract_CP.setGeometry(QtCore.QRect(30, 250, 61, 61))
+        self.playerA_subtract_CP.setGeometry(QtCore.QRect(0, 150, 61, 61))
         self.playerA_subtract_CP.setObjectName("playerA_subtract_CP")
 
         # Player B CP management
         self.CP_B = QtWidgets.QTextEdit(self.centralwidget)
-        self.CP_B.setGeometry(QtCore.QRect(740, 210, 201, 41))
+        self.CP_B.setGeometry(QtCore.QRect(810, 110, 201, 41))
         self.CP_B.setObjectName("CP_B")
         self.CP_number_B = QtWidgets.QLabel(self.centralwidget)
-        self.CP_number_B.setGeometry(QtCore.QRect(800, 250, 81, 61))
+        self.CP_number_B.setGeometry(QtCore.QRect(870, 150, 81, 61))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.CP_number_B.setFont(font)
         self.CP_number_B.setObjectName("CP_number_B")
         self.playerB_add_CP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.addCP_B())
-        self.playerB_add_CP.setGeometry(QtCore.QRect(880, 250, 61, 61))
+        self.playerB_add_CP.setGeometry(QtCore.QRect(950, 150, 61, 61))
         self.playerB_add_CP.setObjectName("playerB_add_CP")
         self.playerB_subtract_CP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.subtractCP_B())
-        self.playerB_subtract_CP.setGeometry(QtCore.QRect(740, 250, 61, 61))
+        self.playerB_subtract_CP.setGeometry(QtCore.QRect(810, 150, 61, 61))
         self.playerB_subtract_CP.setObjectName("playerB_subtract_CP")
 
         # Player A VP management
         self.VP_A = QtWidgets.QTextEdit(self.centralwidget)
-        self.VP_A.setGeometry(QtCore.QRect(30, 350, 201, 41))
+        self.VP_A.setGeometry(QtCore.QRect(0, 0, 201, 41))
         self.VP_A.setObjectName("VP_A")
         self.VP_number_A = QtWidgets.QLabel(self.centralwidget)
-        self.VP_number_A.setGeometry(QtCore.QRect(90, 390, 81, 61))
+        self.VP_number_A.setGeometry(QtCore.QRect(60, 40, 81, 61))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.VP_number_A.setFont(font)
+        self.VP_number_A.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.VP_number_A.setObjectName("VP_number_A")
         self.playerA_add_VP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.addVP_A())
-        self.playerA_add_VP.setGeometry(QtCore.QRect(170, 390, 61, 61))
+        self.playerA_add_VP.setGeometry(QtCore.QRect(140, 40, 61, 61))
         self.playerA_add_VP.setObjectName("playerA_add_VP")
         self.playerA_subtract_VP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.subtractVP_A())
-        self.playerA_subtract_VP.setGeometry(QtCore.QRect(30, 390, 61, 61))
+        self.playerA_subtract_VP.setGeometry(QtCore.QRect(0, 40, 61, 61))
         self.playerA_subtract_VP.setObjectName("playerA_subtract_VP")
 
         # Player B VP management
         self.VP_B = QtWidgets.QTextEdit(self.centralwidget)
-        self.VP_B.setGeometry(QtCore.QRect(740, 350, 201, 41))
+        self.VP_B.setGeometry(QtCore.QRect(810, 0, 201, 41))
         self.VP_B.setObjectName("VP_B")
         self.VP_number_B = QtWidgets.QLabel(self.centralwidget)
-        self.VP_number_B.setGeometry(QtCore.QRect(800, 390, 81, 61))
+        self.VP_number_B.setGeometry(QtCore.QRect(870, 40, 81, 61))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.VP_number_B.setFont(font)
         self.VP_number_B.setObjectName("VP_number_B")
         self.playerB_add_VP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.addVP_B())
-        self.playerB_add_VP.setGeometry(QtCore.QRect(880, 390, 61, 61))
+        self.playerB_add_VP.setGeometry(QtCore.QRect(810, 40, 61, 61))
         self.playerB_add_VP.setObjectName("playerB_add_VP")
         self.playerB_subtract_VP = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.subtractVP_B())
-        self.playerB_subtract_VP.setGeometry(QtCore.QRect(740, 390, 61, 61))
+        self.playerB_subtract_VP.setGeometry(QtCore.QRect(950, 40, 61, 61))
         self.playerB_subtract_VP.setObjectName("playerB_subtract_VP")
 
-        self.playerA = QtWidgets.QTextEdit(self.centralwidget)
-        self.playerA.setGeometry(QtCore.QRect(30, 20, 271, 41))
-        self.playerA.setObjectName("playerA")
-        self.battle_tactic_A_1 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_A_1.setGeometry(QtCore.QRect(240, 140, 181, 21))
-        self.battle_tactic_A_1.setObjectName("battle_tactic_A_1")
-        self.grand_strategy_A = QtWidgets.QComboBox(self.centralwidget)
-        self.grand_strategy_A.setGeometry(QtCore.QRect(240, 510, 221, 22))
-        self.grand_strategy_A.setObjectName("grand_strategy_A")
-        self.grand_strategy_B = QtWidgets.QComboBox(self.centralwidget)
-        self.grand_strategy_B.setGeometry(QtCore.QRect(510, 510, 221, 22))
-        self.grand_strategy_B.setObjectName("grand_strategy_B")
         self.turn_1 = QtWidgets.QTextEdit(self.centralwidget)
-        self.turn_1.setGeometry(QtCore.QRect(460, 130, 51, 41))
+        self.turn_1.setGeometry(QtCore.QRect(480, 210, 51, 41))
         self.turn_1.setObjectName("turn_1")
         self.turn_2 = QtWidgets.QTextEdit(self.centralwidget)
-        self.turn_2.setGeometry(QtCore.QRect(460, 200, 51, 41))
+        self.turn_2.setGeometry(QtCore.QRect(480, 280, 51, 41))
         self.turn_2.setObjectName("turn_2")
         self.turn_3 = QtWidgets.QTextEdit(self.centralwidget)
-        self.turn_3.setGeometry(QtCore.QRect(460, 270, 51, 41))
+        self.turn_3.setGeometry(QtCore.QRect(480, 350, 51, 41))
         self.turn_3.setObjectName("turn_3")
         self.turn_4 = QtWidgets.QTextEdit(self.centralwidget)
-        self.turn_4.setGeometry(QtCore.QRect(460, 340, 51, 41))
+        self.turn_4.setGeometry(QtCore.QRect(480, 420, 51, 41))
         self.turn_4.setObjectName("turn_4")
         self.turn_5 = QtWidgets.QTextEdit(self.centralwidget)
-        self.turn_5.setGeometry(QtCore.QRect(460, 410, 51, 41))
+        self.turn_5.setGeometry(QtCore.QRect(480, 490, 51, 41))
         self.turn_5.setObjectName("turn_5")
-        self.playerB = QtWidgets.QTextEdit(self.centralwidget)
-        self.playerB.setGeometry(QtCore.QRect(670, 20, 271, 41))
-        self.playerB.setObjectName("playerB")
-        self.battle_tactic_A_2 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_A_2.setGeometry(QtCore.QRect(240, 210, 181, 21))
-        self.battle_tactic_A_2.setObjectName("battle_tactic_A_2")
-        self.battle_tactic_A_3 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_A_3.setGeometry(QtCore.QRect(240, 280, 181, 21))
-        self.battle_tactic_A_3.setObjectName("battle_tactic_A_3")
-        self.battle_tactic_A_4 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_A_4.setGeometry(QtCore.QRect(240, 350, 181, 21))
-        self.battle_tactic_A_4.setObjectName("battle_tactic_A_4")
-        self.battle_tactic_A_5 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_A_5.setGeometry(QtCore.QRect(240, 420, 181, 21))
-        self.battle_tactic_A_5.setObjectName("battle_tactic_A_5")
-        self.battle_tactic_B_2 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_B_2.setGeometry(QtCore.QRect(550, 210, 181, 21))
-        self.battle_tactic_B_2.setObjectName("battle_tactic_B_2")
-        self.battle_tactic_B_3 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_B_3.setGeometry(QtCore.QRect(550, 280, 181, 21))
-        self.battle_tactic_B_3.setObjectName("battle_tactic_B_3")
-        self.battle_tactic_B_4 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_B_4.setGeometry(QtCore.QRect(550, 350, 181, 21))
-        self.battle_tactic_B_4.setObjectName("battle_tactic_B_4")
-        self.battle_tactic_B_5 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_B_5.setGeometry(QtCore.QRect(550, 420, 181, 21))
-        self.battle_tactic_B_5.setObjectName("battle_tactic_B_5")
-        self.battle_tactic_B_1 = QtWidgets.QComboBox(self.centralwidget)
-        self.battle_tactic_B_1.setGeometry(QtCore.QRect(550, 140, 181, 21))
-        self.battle_tactic_B_1.setObjectName("battle_tactic_B_1")
-        self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setGeometry(QtCore.QRect(430, 140, 16, 21))
-        self.checkBox.setText("")
-        self.checkBox.setObjectName("checkBox")
-        self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_2.setGeometry(QtCore.QRect(430, 210, 16, 21))
-        self.checkBox_2.setText("")
-        self.checkBox_2.setObjectName("checkBox_2")
-        self.checkBox_3 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_3.setGeometry(QtCore.QRect(430, 280, 16, 21))
-        self.checkBox_3.setText("")
-        self.checkBox_3.setObjectName("checkBox_3")
-        self.checkBox_4 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_4.setGeometry(QtCore.QRect(430, 350, 16, 21))
-        self.checkBox_4.setText("")
-        self.checkBox_4.setObjectName("checkBox_4")
-        self.checkBox_5 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_5.setGeometry(QtCore.QRect(430, 420, 16, 21))
-        self.checkBox_5.setText("")
-        self.checkBox_5.setObjectName("checkBox_5")
-        self.checkBox_6 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_6.setGeometry(QtCore.QRect(530, 140, 16, 21))
-        self.checkBox_6.setText("")
-        self.checkBox_6.setObjectName("checkBox_6")
-        self.checkBox_7 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_7.setGeometry(QtCore.QRect(530, 210, 16, 21))
-        self.checkBox_7.setText("")
-        self.checkBox_7.setObjectName("checkBox_7")
-        self.checkBox_8 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_8.setGeometry(QtCore.QRect(530, 280, 16, 21))
-        self.checkBox_8.setText("")
-        self.checkBox_8.setObjectName("checkBox_8")
-        self.checkBox_9 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_9.setGeometry(QtCore.QRect(530, 350, 16, 21))
-        self.checkBox_9.setText("")
-        self.checkBox_9.setObjectName("checkBox_9")
-        self.checkBox_10 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_10.setGeometry(QtCore.QRect(530, 420, 16, 21))
-        self.checkBox_10.setText("")
-        self.checkBox_10.setObjectName("checkBox_10")
+
         self.grand_strategy = QtWidgets.QTextEdit(self.centralwidget)
-        self.grand_strategy.setGeometry(QtCore.QRect(290, 470, 401, 31))
+        self.grand_strategy.setGeometry(QtCore.QRect(430, 120, 161, 31))
         self.grand_strategy.setObjectName("grand_strategy")
-        self.checkBox_11 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_11.setGeometry(QtCore.QRect(750, 510, 16, 21))
-        self.checkBox_11.setTabletTracking(False)
-        self.checkBox_11.setFocusPolicy(QtCore.Qt.StrongFocus)
-        self.checkBox_11.setText("")
-        self.checkBox_11.setIconSize(QtCore.QSize(16, 16))
-        self.checkBox_11.setObjectName("checkBox_11")
-        self.checkBox_12 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_12.setGeometry(QtCore.QRect(210, 510, 16, 21))
-        self.checkBox_12.setText("")
-        self.checkBox_12.setObjectName("checkBox_12")
+        self.grand_strategy_A = QtWidgets.QComboBox(self.centralwidget)
+        self.grand_strategy_A.setGeometry(QtCore.QRect(270, 160, 221, 22))
+        self.grand_strategy_A.setObjectName("grand_strategy_A")
+        grand_strategy_list = ["Serve the Head", "Hold the Line", "Vendetta", "Dominatiing Presence", "Beast Master",
+                               "Prized Sorcery", "Pillars of Belief", "Predator's Domain"]
+        self.grand_strategy_A.addItems(grand_strategy_list)
+        self.grand_strategy_B = QtWidgets.QComboBox(self.centralwidget)
+        self.grand_strategy_B.setGeometry(QtCore.QRect(510, 160, 221, 22))
+        self.grand_strategy_B.setObjectName("grand_strategy_B")
+        self.grand_strategy_B.addItems(grand_strategy_list)
+
+        self.checkBoxGS_A = QtWidgets.QCheckBox("Scored", self.centralwidget)
+        self.checkBoxGS_A.setGeometry(QtCore.QRect(240, 160, 16, 21))
+        self.checkBoxGS_A.setText("Scored")
+        self.checkBoxGS_A.setObjectName("checkBoxGS_A")
+        self.checkBoxGS_A.stateChanged.connect(lambda: self.checkedBoxGS_A())
+        self.checkBoxGS_B = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBoxGS_B.setGeometry(QtCore.QRect(750, 160, 16, 21))
+        self.checkBoxGS_B.setTabletTracking(False)
+        self.checkBoxGS_B.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.checkBoxGS_B.setText("Scored")
+        self.checkBoxGS_B.setIconSize(QtCore.QSize(16, 16))
+        self.checkBoxGS_B.setObjectName("checkBoxGS_B")
+        self.checkBoxGS_B.stateChanged.connect(lambda: self.checkedBoxGS_B())
+
+        battle_tactic_list = ["Broken Ranks", "Conquer", "Slay the Warlord", "Ferocious Advance", "Bring it Down!",
+                              "Aggressive Expansion", "Monstrous Takeover", "Savage Spearhead"]
+        self.battle_tactic_A_1 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_A_1.setGeometry(QtCore.QRect(280, 220, 181, 21))
+        self.battle_tactic_A_1.setObjectName("battle_tactic_A_1")
+        self.battle_tactic_A_1.addItems(battle_tactic_list)
+        self.battle_tactic_A_2 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_A_2.setGeometry(QtCore.QRect(280, 290, 181, 21))
+        self.battle_tactic_A_2.setObjectName("battle_tactic_A_2")
+        self.battle_tactic_A_2.addItems(battle_tactic_list)
+        self.battle_tactic_A_3 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_A_3.setGeometry(QtCore.QRect(280, 360, 181, 21))
+        self.battle_tactic_A_3.setObjectName("battle_tactic_A_3")
+        self.battle_tactic_A_3.addItems(battle_tactic_list)
+        self.battle_tactic_A_4 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_A_4.setGeometry(QtCore.QRect(280, 430, 181, 21))
+        self.battle_tactic_A_4.setObjectName("battle_tactic_A_4")
+        self.battle_tactic_A_4.addItems(battle_tactic_list)
+        self.battle_tactic_A_5 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_A_5.setGeometry(QtCore.QRect(280, 500, 181, 21))
+        self.battle_tactic_A_5.setObjectName("battle_tactic_A_5")
+        self.battle_tactic_A_5.addItems(battle_tactic_list)
+
+        self.battle_tactic_B_1 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_B_1.setGeometry(QtCore.QRect(550, 220, 181, 21))
+        self.battle_tactic_B_1.setObjectName("battle_tactic_B_1")
+        self.battle_tactic_B_1.addItems(battle_tactic_list)
+        self.battle_tactic_B_2 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_B_2.setGeometry(QtCore.QRect(550, 290, 181, 21))
+        self.battle_tactic_B_2.setObjectName("battle_tactic_B_2")
+        self.battle_tactic_B_2.addItems(battle_tactic_list)
+        self.battle_tactic_B_3 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_B_3.setGeometry(QtCore.QRect(550, 360, 181, 21))
+        self.battle_tactic_B_3.setObjectName("battle_tactic_B_3")
+        self.battle_tactic_B_3.addItems(battle_tactic_list)
+        self.battle_tactic_B_4 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_B_4.setGeometry(QtCore.QRect(550, 430, 181, 21))
+        self.battle_tactic_B_4.setObjectName("battle_tactic_B_4")
+        self.battle_tactic_B_4.addItems(battle_tactic_list)
+        self.battle_tactic_B_5 = QtWidgets.QComboBox(self.centralwidget)
+        self.battle_tactic_B_5.setGeometry(QtCore.QRect(550, 500, 181, 21))
+        self.battle_tactic_B_5.setObjectName("battle_tactic_B_5")
+        self.battle_tactic_B_5.addItems(battle_tactic_list)
+
+        self.monster_tactic_A_1 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_A_1.setGeometry(QtCore.QRect(100, 240, 81, 41))
+        self.monster_tactic_A_1.setObjectName("monster_tactic_A_1")
+        self.monster_tactic_A_1.stateChanged.connect(lambda: self.one_box_A(self.monster_tactic_A_1))
+        self.score_tactic_A_1 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_A_1.setGeometry(QtCore.QRect(190, 240, 81, 41))
+        self.score_tactic_A_1.setObjectName("score_tactic_A_1")
+        self.score_tactic_A_1.stateChanged.connect(lambda: self.two_box_A(self.score_tactic_A_1))
+        self.one_tactic_A_1 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_A_1.setGeometry(QtCore.QRect(280, 240, 51, 41))
+        self.one_tactic_A_1.setObjectName("one_tactic_A_1")
+        self.one_tactic_A_1.stateChanged.connect(lambda: self.one_box_A(self.one_tactic_A_1))
+        self.two_tactic_A_1 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_A_1.setGeometry(QtCore.QRect(340, 240, 51, 41))
+        self.two_tactic_A_1.setObjectName("two_tactic_A_1")
+        self.two_tactic_A_1.stateChanged.connect(lambda: self.one_box_A(self.two_tactic_A_1))
+        self.more_tactic_A_1 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_A_1.setGeometry(QtCore.QRect(400, 240, 51, 41))
+        self.more_tactic_A_1.setObjectName("more_tactic_A_1")
+        self.more_tactic_A_1.stateChanged.connect(lambda: self.one_box_A(self.more_tactic_A_1))
+
+        self.monster_tactic_A_2 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_A_2.setGeometry(QtCore.QRect(100, 310, 81, 41))
+        self.monster_tactic_A_2.setObjectName("monster_tactic_A_2")
+        self.monster_tactic_A_2.stateChanged.connect(lambda: self.one_box_A(self.monster_tactic_A_2))
+        self.score_tactic_A_2 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_A_2.setGeometry(QtCore.QRect(190, 310, 81, 41))
+        self.score_tactic_A_2.setObjectName("score_tactic_A_2")
+        self.score_tactic_A_2.stateChanged.connect(lambda: self.two_box_A(self.score_tactic_A_2))
+        self.one_tactic_A_2 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_A_2.setGeometry(QtCore.QRect(280, 310, 51, 41))
+        self.one_tactic_A_2.setObjectName("one_tactic_A_2")
+        self.one_tactic_A_2.stateChanged.connect(lambda: self.one_box_A(self.one_tactic_A_2))
+        self.two_tactic_A_2 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_A_2.setGeometry(QtCore.QRect(340, 310, 51, 41))
+        self.two_tactic_A_2.setObjectName("two_tactic_A_2")
+        self.two_tactic_A_2.stateChanged.connect(lambda: self.one_box_A(self.two_tactic_A_2))
+        self.more_tactic_A_2 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_A_2.setGeometry(QtCore.QRect(400, 310, 51, 41))
+        self.more_tactic_A_2.setObjectName("more_tactic_A_2")
+        self.more_tactic_A_2.stateChanged.connect(lambda: self.one_box_A(self.more_tactic_A_2))
+
+        self.monster_tactic_A_3 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_A_3.setGeometry(QtCore.QRect(100, 380, 81, 41))
+        self.monster_tactic_A_3.setObjectName("monster_tactic_A_3")
+        self.monster_tactic_A_3.stateChanged.connect(lambda: self.one_box_A(self.monster_tactic_A_3))
+        self.score_tactic_A_3 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_A_3.setGeometry(QtCore.QRect(190, 380, 81, 41))
+        self.score_tactic_A_3.setObjectName("score_tactic_A_3")
+        self.score_tactic_A_3.stateChanged.connect(lambda: self.two_box_A(self.score_tactic_A_3))
+        self.one_tactic_A_3 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_A_3.setGeometry(QtCore.QRect(280, 380, 51, 41))
+        self.one_tactic_A_3.setObjectName("one_tactic_A_3")
+        self.one_tactic_A_3.stateChanged.connect(lambda: self.one_box_A(self.one_tactic_A_3))
+        self.two_tactic_A_3 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_A_3.setGeometry(QtCore.QRect(340, 380, 51, 41))
+        self.two_tactic_A_3.setObjectName("two_tactic_A_3")
+        self.two_tactic_A_3.stateChanged.connect(lambda: self.one_box_A(self.two_tactic_A_3))
+        self.more_tactic_A_3 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_A_3.setGeometry(QtCore.QRect(400, 380, 51, 41))
+        self.more_tactic_A_3.setObjectName("more_tactic_A_3")
+        self.more_tactic_A_3.stateChanged.connect(lambda: self.one_box_A(self.more_tactic_A_3))
+
+        self.monster_tactic_A_4 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_A_4.setGeometry(QtCore.QRect(100, 450, 81, 41))
+        self.monster_tactic_A_4.setObjectName("monster_tactic_A_4")
+        self.monster_tactic_A_4.stateChanged.connect(lambda: self.one_box_A(self.monster_tactic_A_4))
+        self.score_tactic_A_4 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_A_4.setGeometry(QtCore.QRect(190, 450, 81, 41))
+        self.score_tactic_A_4.setObjectName("score_tactic_A_4")
+        self.score_tactic_A_4.stateChanged.connect(lambda: self.two_box_A(self.score_tactic_A_4))
+        self.one_tactic_A_4 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_A_4.setGeometry(QtCore.QRect(280, 450, 51, 41))
+        self.one_tactic_A_4.setObjectName("one_tactic_A_4")
+        self.one_tactic_A_4.stateChanged.connect(lambda: self.one_box_A(self.one_tactic_A_4))
+        self.two_tactic_A_4 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_A_4.setGeometry(QtCore.QRect(340, 450, 51, 41))
+        self.two_tactic_A_4.setObjectName("two_tactic_A_4")
+        self.two_tactic_A_4.stateChanged.connect(lambda: self.one_box_A(self.two_tactic_A_4))
+        self.more_tactic_A_4 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_A_4.setGeometry(QtCore.QRect(400, 450, 51, 41))
+        self.more_tactic_A_4.setObjectName("more_tactic_A_4")
+        self.more_tactic_A_4.stateChanged.connect(lambda: self.one_box_A(self.more_tactic_A_4))
+
+        self.monster_tactic_A_5 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_A_5.setGeometry(QtCore.QRect(100, 520, 81, 41))
+        self.monster_tactic_A_5.setObjectName("monster_tactic_A_5")
+        self.monster_tactic_A_5.stateChanged.connect(lambda: self.one_box_A(self.monster_tactic_A_5))
+        self.score_tactic_A_5 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_A_5.setGeometry(QtCore.QRect(190, 520, 81, 41))
+        self.score_tactic_A_5.setObjectName("score_tactic_A_5")
+        self.score_tactic_A_5.stateChanged.connect(lambda: self.two_box_A(self.score_tactic_A_5))
+        self.one_tactic_A_5 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_A_5.setGeometry(QtCore.QRect(280, 520, 51, 41))
+        self.one_tactic_A_5.setObjectName("one_tactic_A_5")
+        self.one_tactic_A_5.stateChanged.connect(lambda: self.one_box_A(self.one_tactic_A_5))
+        self.two_tactic_A_5 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_A_5.setGeometry(QtCore.QRect(340, 520, 51, 41))
+        self.two_tactic_A_5.setObjectName("two_tactic_A_5")
+        self.two_tactic_A_5.stateChanged.connect(lambda: self.one_box_A(self.two_tactic_A_5))
+        self.more_tactic_A_5 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_A_5.setGeometry(QtCore.QRect(400, 520, 51, 41))
+        self.more_tactic_A_5.setObjectName("more_tactic_A_5")
+        self.more_tactic_A_5.stateChanged.connect(lambda: self.one_box_A(self.more_tactic_A_5))
+
+        self.monster_tactic_B_1 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_B_1.setGeometry(QtCore.QRect(850, 240, 81, 41))
+        self.monster_tactic_B_1.setObjectName("monster_tactic_B_1")
+        self.monster_tactic_B_1.stateChanged.connect(lambda: self.one_box_B(self.monster_tactic_B_1))
+        self.score_tactic_B_1 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_B_1.setGeometry(QtCore.QRect(760, 240, 81, 41))
+        self.score_tactic_B_1.setObjectName("score_tactic_B_1")
+        self.score_tactic_B_1.stateChanged.connect(lambda: self.two_box_B(self.score_tactic_B_1))
+        self.one_tactic_B_1 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_B_1.setGeometry(QtCore.QRect(690, 240, 51, 41))
+        self.one_tactic_B_1.setObjectName("one_tactic_B_1")
+        self.one_tactic_B_1.stateChanged.connect(lambda: self.one_box_B(self.one_tactic_B_1))
+        self.two_tactic_B_1 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_B_1.setGeometry(QtCore.QRect(630, 240, 51, 41))
+        self.two_tactic_B_1.setObjectName("two_tactic_B_1")
+        self.two_tactic_B_1.stateChanged.connect(lambda: self.one_box_B(self.two_tactic_B_1))
+        self.more_tactic_B_1 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_B_1.setGeometry(QtCore.QRect(560, 240, 51, 41))
+        self.more_tactic_B_1.setObjectName("more_tactic_B_1")
+        self.more_tactic_B_1.stateChanged.connect(lambda: self.more_box_B(self.more_tactic_B_1))
+
+        self.monster_tactic_B_2 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_B_2.setGeometry(QtCore.QRect(850, 310, 81, 41))
+        self.monster_tactic_B_2.setObjectName("monster_tactic_B_2")
+        self.monster_tactic_B_2.stateChanged.connect(lambda: self.one_box_B(self.monster_tactic_B_2))
+        self.score_tactic_B_2 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_B_2.setGeometry(QtCore.QRect(760, 310, 81, 41))
+        self.score_tactic_B_2.setObjectName("score_tactic_B_2")
+        self.score_tactic_B_2.stateChanged.connect(lambda: self.two_box_B(self.score_tactic_B_2))
+        self.one_tactic_B_2 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_B_2.setGeometry(QtCore.QRect(690, 310, 51, 41))
+        self.one_tactic_B_2.setObjectName("one_tactic_B_2")
+        self.one_tactic_B_2.stateChanged.connect(lambda: self.one_box_B(self.one_tactic_B_2))
+        self.two_tactic_B_2 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_B_2.setGeometry(QtCore.QRect(630, 310, 51, 41))
+        self.two_tactic_B_2.setObjectName("two_tactic_B_2")
+        self.two_tactic_B_2.stateChanged.connect(lambda: self.one_box_B(self.two_tactic_B_2))
+        self.more_tactic_B_2 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_B_2.setGeometry(QtCore.QRect(560, 310, 51, 41))
+        self.more_tactic_B_2.setObjectName("more_tactic_B_2")
+        self.more_tactic_B_2.stateChanged.connect(lambda: self.more_box_B(self.more_tactic_B_2))
+
+        self.monster_tactic_B_3 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_B_3.setGeometry(QtCore.QRect(850, 380, 81, 41))
+        self.monster_tactic_B_3.setObjectName("monster_tactic_B_3")
+        self.monster_tactic_B_3.stateChanged.connect(lambda: self.one_box_B(self.monster_tactic_B_3))
+        self.score_tactic_B_3 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_B_3.setGeometry(QtCore.QRect(760, 380, 81, 41))
+        self.score_tactic_B_3.setObjectName("score_tactic_B_3")
+        self.score_tactic_B_3.stateChanged.connect(lambda: self.two_box_B(self.score_tactic_B_3))
+        self.one_tactic_B_3 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_B_3.setGeometry(QtCore.QRect(690, 380, 51, 41))
+        self.one_tactic_B_3.setObjectName("one_tactic_B_3")
+        self.one_tactic_B_3.stateChanged.connect(lambda: self.one_box_B(self.one_tactic_B_3))
+        self.two_tactic_B_3 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_B_3.setGeometry(QtCore.QRect(630, 380, 51, 41))
+        self.two_tactic_B_3.setObjectName("two_tactic_B_3")
+        self.two_tactic_B_3.stateChanged.connect(lambda: self.one_box_B(self.two_tactic_B_3))
+        self.more_tactic_B_3 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_B_3.setGeometry(QtCore.QRect(560, 380, 51, 41))
+        self.more_tactic_B_3.setObjectName("more_tactic_B_3")
+        self.more_tactic_B_3.stateChanged.connect(lambda: self.more_box_B(self.more_tactic_B_3))
+
+        self.monster_tactic_B_4 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_B_4.setGeometry(QtCore.QRect(850, 450, 81, 41))
+        self.monster_tactic_B_4.setObjectName("monster_tactic_B_4")
+        self.monster_tactic_B_4.stateChanged.connect(lambda: self.one_box_B(self.monster_tactic_B_4))
+        self.score_tactic_B_4 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_B_4.setGeometry(QtCore.QRect(760, 450, 81, 41))
+        self.score_tactic_B_4.setObjectName("score_tactic_B_4")
+        self.score_tactic_B_4.stateChanged.connect(lambda: self.two_box_B(self.score_tactic_B_4))
+        self.one_tactic_B_4 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_B_4.setGeometry(QtCore.QRect(690, 450, 51, 41))
+        self.one_tactic_B_4.setObjectName("one_tactic_B_4")
+        self.one_tactic_B_4.stateChanged.connect(lambda: self.one_box_B(self.one_tactic_B_4))
+        self.two_tactic_B_4 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_B_4.setGeometry(QtCore.QRect(630, 450, 51, 41))
+        self.two_tactic_B_4.setObjectName("two_tactic_B_4")
+        self.two_tactic_B_4.stateChanged.connect(lambda: self.one_box_B(self.two_tactic_B_4))
+        self.more_tactic_B_4 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_B_4.setGeometry(QtCore.QRect(560, 450, 51, 41))
+        self.more_tactic_B_4.setObjectName("more_tactic_B_4")
+        self.more_tactic_B_4.stateChanged.connect(lambda: self.more_box_B(self.more_tactic_B_4))
+
+        self.monster_tactic_B_5 = QtWidgets.QCheckBox("monster", self.centralwidget)
+        self.monster_tactic_B_5.setGeometry(QtCore.QRect(850, 520, 81, 41))
+        self.monster_tactic_B_5.setObjectName("monster_tactic_B_5")
+        self.monster_tactic_B_5.stateChanged.connect(lambda: self.one_box_B(self.monster_tactic_B_5))
+        self.score_tactic_B_5 = QtWidgets.QCheckBox("scored", self.centralwidget)
+        self.score_tactic_B_5.setGeometry(QtCore.QRect(760, 520, 81, 41))
+        self.score_tactic_B_5.setObjectName("score_tactic_B_5")
+        self.score_tactic_B_5.stateChanged.connect(lambda: self.two_box_B(self.score_tactic_B_5))
+        self.one_tactic_B_5 = QtWidgets.QCheckBox("one", self.centralwidget)
+        self.one_tactic_B_5.setGeometry(QtCore.QRect(690, 520, 51, 41))
+        self.one_tactic_B_5.setObjectName("one_tactic_B_5")
+        self.one_tactic_B_5.stateChanged.connect(lambda: self.one_box_B(self.one_tactic_B_5))
+        self.two_tactic_B_5 = QtWidgets.QCheckBox("two", self.centralwidget)
+        self.two_tactic_B_5.setGeometry(QtCore.QRect(630, 520, 51, 41))
+        self.two_tactic_B_5.setObjectName("two_tactic_B_5")
+        self.two_tactic_B_5.stateChanged.connect(lambda: self.one_box_B(self.two_tactic_B_5))
+        self.more_tactic_B_5 = QtWidgets.QCheckBox("more", self.centralwidget)
+        self.more_tactic_B_5.setGeometry(QtCore.QRect(560, 520, 51, 41))
+        self.more_tactic_B_5.setObjectName("more_tactic_B_5")
+        self.more_tactic_B_5.stateChanged.connect(lambda: self.more_box_B(self.more_tactic_B_5))
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -234,23 +451,69 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+    def two_box_A(self, scored_checkBox):
+        if scored_checkBox.checkState() == 2:
+            addition_1 = eval(self.VP_number_A.text() + "+2")
+            self.VP_number_A.setText(str(addition_1))
+        else:
+            subtraction_2 = eval(self.VP_number_A.text() + "-2")
+            self.VP_number_A.setText(str(subtraction_2))
 
-    #Battleround logic
+    def one_box_A(self, one_checkBox):
+        if one_checkBox.checkState() == 2:
+            addition_1 = eval(self.VP_number_A.text() + "+1")
+            self.VP_number_A.setText(str(addition_1))
+        else:
+            subtraction_2 = eval(self.VP_number_A.text() + "-1")
+            self.VP_number_A.setText(str(subtraction_2))
+
+    def two_box_B(self, scored_checkBox):
+        if scored_checkBox.checkState() == 2:
+            addition_1 = eval(self.VP_number_B.text() + "+2")
+            self.VP_number_B.setText(str(addition_1))
+        else:
+            subtraction_2 = eval(self.VP_number_B.text() + "-2")
+            self.VP_number_B.setText(str(subtraction_2))
+
+    def one_box_B(self, one_checkBox):
+        if one_checkBox.checkState() == 2:
+            addition_1 = eval(self.VP_number_B.text() + "+1")
+            self.VP_number_B.setText(str(addition_1))
+        else:
+            subtraction_2 = eval(self.VP_number_B.text() + "-1")
+            self.VP_number_B.setText(str(subtraction_2))
+
+    def checkedBoxGS_A(self):
+        if self.checkBoxGS_A.checkState() == 2:
+            addition = eval(self.VP_number_A.text() + "+3")
+            self.VP_number_A.setText(str(addition))
+        else:
+            subtract_1 = (self.VP_number_A.text() + "-3")
+            subtraction = eval(subtract_1)
+            self.VP_number_A.setText(str(subtraction))
+
+    def checkedBoxGS_B(self):
+        if self.checkBoxGS_B.checkState() == 2:
+            addition = eval(self.VP_number_B.text() + "+3")
+            self.VP_number_B.setText(str(addition))
+        else:
+            subtract_1 = (self.VP_number_B.text() + "-3")
+            subtraction = eval(subtract_1)
+            self.VP_number_B.setText(str(subtraction))
+
+    # Battleround logic
     def battleround_num(self):
         if self.turn_number_A.text() == self.turn_number_B.text() or self.current_battleround_number.text() >= "5":
-            pass
-        elif self.turn_number_A.text() > str(eval(self.turn_number_B.text() + "+1")):
-            pass
-        elif self.turn_number_B.text() > str(eval(self.turn_number_A.text() + "+1")):
             pass
         else:
             add_battleround = (self.current_battleround_number.text() + "+1")
             hola = eval(add_battleround)
             self.current_battleround_number.setText(str(hola))
+            self.reset_CP()
 
-    #Turn management
+    # Turn management
     def addTurn_A(self):
-        if self.turn_number_A.text() <= "4":
+        if self.turn_number_A.text() <= "4" and self.turn_number_A.text() < str(eval(self.turn_number_B.text() + "+1")):
             add_1 = (self.turn_number_A.text() + "+1")
             addition = eval(add_1)
             self.turn_number_A.setText(str(addition))
@@ -258,16 +521,8 @@ class Ui_MainWindow(object):
         else:
             pass
 
-    def subtractTurn_A(self):
-        if self.turn_number_A.text() == "0":
-            pass
-        elif "0" < self.turn_number_A.text() <= "5":
-            subtract_1 = (self.turn_number_A.text() + "-1")
-            subtraction = eval(subtract_1)
-            self.turn_number_A.setText(str(subtraction))
-
     def addTurn_B(self, pressed):
-        if self.turn_number_B.text() <= "4":
+        if self.turn_number_B.text() <= "4" and self.turn_number_B.text() < str(eval(self.turn_number_A.text() + "+1")):
             add_1 = (self.turn_number_B.text() + "+1")
             addition = eval(add_1)
             self.turn_number_B.setText(str(addition))
@@ -275,15 +530,7 @@ class Ui_MainWindow(object):
         else:
             pass
 
-    def subtractTurn_B(self):
-        if self.turn_number_B.text() == "0":
-            pass
-        elif "0" < self.turn_number_B.text() <= "5":
-            subtract_1 = (self.turn_number_B.text() + "-1")
-            subtraction = eval(subtract_1)
-            self.turn_number_B.setText(str(subtraction))
-
-    #CP management
+    # CP management
     def addCP_A(self):
         add_cp = (self.CP_number_A.text() + "+1")
         cp_addition = eval(add_cp)
@@ -310,7 +557,11 @@ class Ui_MainWindow(object):
             cp_subtraction = eval(subtract_cp)
             self.CP_number_B.setText(str(cp_subtraction))
 
-    #VP management
+    def reset_CP(self):
+        self.CP_number_A.setText("0")
+        self.CP_number_B.setText("0")
+
+    # VP management
     def addVP_A(self):
         add_vp = (self.VP_number_A.text() + "+1")
         vp_addition = eval(add_vp)
@@ -337,99 +588,99 @@ class Ui_MainWindow(object):
             vp_subtraction = eval(subtract_vp)
             self.VP_number_B.setText(str(vp_subtraction))
 
-
-
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Warhammer_AoS_Game_Display"))
         self.playerA_add_turn.setText(_translate("MainWindow", "+"))
-        self.playerA_subtract_turn.setText(_translate("MainWindow", "-"))
-        self.current_battleround_text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Battle Round</span></p></body></html>"))
-        self.turn_A.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Turn Nº</span></p></body></html>"))
+        # self.playerA_subtract_turn.setText(_translate("MainWindow", "-"))
+        self.current_battleround_text.setHtml(_translate("MainWindow",
+                                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                                         "p, li { white-space: pre-wrap; }\n"
+                                                         "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                                         "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Battle Round</span></p></body></html>"))
+        self.turn_A.setHtml(_translate("MainWindow",
+                                       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                       "p, li { white-space: pre-wrap; }\n"
+                                       "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                       "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Turn Nº</span></p></body></html>"))
         self.playerB_add_turn.setText(_translate("MainWindow", "+"))
-        self.turn_B.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Turn Nº</span></p></body></html>"))
-        self.playerB_subtract_turn.setText(_translate("MainWindow", "-"))
+        self.turn_B.setHtml(_translate("MainWindow",
+                                       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                       "p, li { white-space: pre-wrap; }\n"
+                                       "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                       "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Turn Nº</span></p></body></html>"))
+        # self.playerB_subtract_turn.setText(_translate("MainWindow", "-"))
         self.playerA_add_CP.setText(_translate("MainWindow", "+"))
-        self.CP_A.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">CP</span></p></body></html>"))
+        self.CP_A.setHtml(_translate("MainWindow",
+                                     "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                     "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                     "p, li { white-space: pre-wrap; }\n"
+                                     "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                     "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">CP</span></p></body></html>"))
         self.playerA_subtract_CP.setText(_translate("MainWindow", "-"))
         self.playerB_add_CP.setText(_translate("MainWindow", "+"))
-        self.CP_B.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">CP</span></p></body></html>"))
+        self.CP_B.setHtml(_translate("MainWindow",
+                                     "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                     "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                     "p, li { white-space: pre-wrap; }\n"
+                                     "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                     "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">CP</span></p></body></html>"))
         self.playerB_subtract_CP.setText(_translate("MainWindow", "-"))
         self.playerA_add_VP.setText(_translate("MainWindow", "+"))
-        self.VP_A.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Victory Points</span></p></body></html>"))
+        self.VP_A.setHtml(_translate("MainWindow",
+                                     "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                     "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                     "p, li { white-space: pre-wrap; }\n"
+                                     "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                     "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Victory Points</span></p></body></html>"))
         self.playerA_subtract_VP.setText(_translate("MainWindow", "-"))
         self.playerB_add_VP.setText(_translate("MainWindow", "+"))
-        self.VP_B.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Victory Points</span></p></body></html>"))
+        self.VP_B.setHtml(_translate("MainWindow",
+                                     "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                     "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                     "p, li { white-space: pre-wrap; }\n"
+                                     "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                     "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Victory Points</span></p></body></html>"))
         self.playerB_subtract_VP.setText(_translate("MainWindow", "-"))
-        self.playerA.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Player A</span></p></body></html>"))
-        self.turn_1.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">1</span></p></body></html>"))
-        self.turn_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">2</span></p></body></html>"))
-        self.turn_3.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">3</span></p></body></html>"))
-        self.turn_4.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">4</span></p></body></html>"))
-        self.turn_5.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">5</span></p></body></html>"))
-        self.playerB.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Player B</span></p></body></html>"))
-        self.grand_strategy.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">GRAND STRATEGY</span></p></body></html>"))
+        self.turn_1.setHtml(_translate("MainWindow",
+                                       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                       "p, li { white-space: pre-wrap; }\n"
+                                       "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                       "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">1</span></p></body></html>"))
+        self.turn_2.setHtml(_translate("MainWindow",
+                                       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                       "p, li { white-space: pre-wrap; }\n"
+                                       "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                       "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">2</span></p></body></html>"))
+        self.turn_3.setHtml(_translate("MainWindow",
+                                       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                       "p, li { white-space: pre-wrap; }\n"
+                                       "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                       "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">3</span></p></body></html>"))
+        self.turn_4.setHtml(_translate("MainWindow",
+                                       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                       "p, li { white-space: pre-wrap; }\n"
+                                       "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                       "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">4</span></p></body></html>"))
+        self.turn_5.setHtml(_translate("MainWindow",
+                                       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                       "p, li { white-space: pre-wrap; }\n"
+                                       "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                       "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">5</span></p></body></html>"))
+        self.grand_strategy.setHtml(_translate("MainWindow",
+                                               "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                               "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                               "p, li { white-space: pre-wrap; }\n"
+                                               "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                                               "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">GRAND STRATEGY</span></p></body></html>"))
 
         self.current_battleround_number.setText(_translate("MainWindow", "0"))
         self.turn_number_A.setText(_translate("MainWindow", "0"))
@@ -442,6 +693,7 @@ class Ui_MainWindow(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
