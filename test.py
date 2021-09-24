@@ -42,7 +42,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.turn_number_A.setFont(font)
-        self.turn_number_A.setLayoutDirection(QtCore.Qt.LeftToRight)
+        # self.turn_number_A.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.turn_number_A.setObjectName("turn_number_A")
         self.playerA_add_turn = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.addTurn_A())
         self.playerA_add_turn.setGeometry(QtCore.QRect(310, 40, 51, 51))
@@ -679,11 +679,3 @@ class Ui_MainWindow(object):
         self.VP_number_B.setText(_translate("MainWindow", "0"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
